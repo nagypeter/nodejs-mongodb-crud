@@ -1,4 +1,4 @@
-#Node.js-Express-MongoDB CRUD sample Application
+# Node.js-Express-MongoDB CRUD sample Application
 
 This is a simple Node.js CRUD application using MongoDB.
 
@@ -19,7 +19,14 @@ MongoDB: `mongodb://mongodb`
 
 Express: `app.listen(process.env.PORT || 3000);`
 
-##History
+Wercker environment properties:
+
++ DOCKER\_USERNAME = username for Docker account
++ DOCKER\_PASSWORD = password for Docker account
++ DOCKER\_TAG = tag of the docker image
++ DOCKER\_REPOSITORY = name of the new repository (includes image name)
+
+## History
 
 ### 1.0.0
 
