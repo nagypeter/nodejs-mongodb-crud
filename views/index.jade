@@ -1,0 +1,20 @@
+extends layout
+
+block content
+    div.container
+        div.page-header
+            h1 <strong>Hi, I'm an Express + MongoDB app running on OCCS1!</strong>
+        #employees
+            h2= title
+            - each employee in employees
+              div(class="panel panel-primary")
+                div.created_at(class="hidden")= employee.created_at
+                div.panel-heading
+                    div.title(class="panel-title")= employee.name
+                div.panel-body
+                    div(class="col-xs-10 col-md-10")= employee.title
+                    div(class="col-xs-1 col-md-1")
+                        a(href="/employee/" + employee._id.toHexString() + "/edit" class="btn btn-info")!= "Edit"
+                    div(class="col-xs-1 col-md-1")
+                        a(href="/employee/" + employee._id.toHexString() + "/delete" class="btn btn-danger")!= "X"
+            a(href="/employee/new" class="btn btn-default")!= "Add New Employee"

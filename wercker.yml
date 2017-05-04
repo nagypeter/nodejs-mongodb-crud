@@ -1,0 +1,15 @@
+box: node:6.10
+build:
+  steps:
+    # A step that executes `npm install` command
+    - npm-install
+push:
+  steps:
+    # Push to public docker repo
+    - internal/docker-push:
+        username: $DOCKER_USERNAME
+        password: $DOCKER_PASSWORD
+        tag: 0.0.1
+        repository: $DOCKER_REPOSITORY
+        registry: https://index.docker.io/v1/
+        cmd: node pipeline/source/app.js

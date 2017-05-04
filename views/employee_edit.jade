@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    div.container
+        form.form-signin(method="post")
+            h2.form-singin-heading= "Edit Employee"
+            input(name="_id", type="hidden", value=_id)
+            input.form-control(type="text", name="name", id="editEmployeeName", placeholder="Name", value=name, autofocus)
+            input.form-control(type="text", name="title", id="editEmployeeTitle", placeholder="Title", value=title)
+            input(type="submit", value="Update", class="btn btn-lg btn-primary btn-block")
+            br
+            a(href="/")!= "Back to Employee List"
