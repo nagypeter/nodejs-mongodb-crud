@@ -11,5 +11,5 @@ push:
         password: $DOCKER_PASSWORD
         tag: $DOCKER_TAG
         repository: $DOCKER_REPOSITORY
-        registry: https://index.docker.io/v1/
+        registry: https://index.docker.io/v2/
         cmd: node pipeline/source/app.js
